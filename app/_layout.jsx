@@ -17,32 +17,22 @@ const RootLayout = () => {
           headerTintColor: theme.title,
         }}
       >
+
         <Stack.Screen name="index" options={{ title: "Home" }} />
         <Stack.Screen name="about" options={{ title: "About" }} />
         <Stack.Screen
           name="contact"
           options={{ title: "Contact", headerShown: false }}
         />
+        // For auth page
+        <Stack.Screen name="auth" options={{ headerShown: false }} />
       </Stack>
 
-      <ThemedView style={[styles.footer]}>
-        <Link href="/about" style={{ color: theme.title }}>
-          About
-        </Link>
-        <Link href="/contact" style={{ color: theme.title }}>
-          Contact
-        </Link>
-      </ThemedView>
+      
     </>
   );
 };
 
 export default RootLayout;
 
-const styles = StyleSheet.create({
-  footer: {
-    padding: 25,
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
-});
+const styles = StyleSheet.create({});
