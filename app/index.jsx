@@ -2,11 +2,13 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import { Link } from 'expo-router'
 
 import Logo from '../assets/img/logo_light.png'
+import ThemedView from '../components/ThemedView'
+import ThemedLogo from '../components/ThemedLogo'
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Image source={Logo} style={styles.img} />
+    <ThemedView style={styles.container}>
+      <ThemedLogo style={styles.img} />
 
       <Text style={styles.title}>The Number 1</Text>
 
@@ -14,7 +16,7 @@ const Home = () => {
         Reading List App
       </Text>
 
-    </View>
+    </ThemedView>
   )
 }
 
@@ -22,7 +24,6 @@ export default Home
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#e0dfe8',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'

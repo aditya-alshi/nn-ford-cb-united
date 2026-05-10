@@ -2,6 +2,7 @@ import { StatusBar, StyleSheet, Text, useColorScheme, View } from "react-native"
 import React from "react";
 import { Slot, Stack, Link } from "expo-router";
 import { Colors } from "../constants/Colors";
+import ThemedView from "../components/ThemedView";
 
 const RootLayout = () => {
   const colorScheme = useColorScheme();
@@ -24,14 +25,14 @@ const RootLayout = () => {
         />
       </Stack>
 
-      <View style={[styles.footer, { backgroundColor: theme.uiBackground }]}>
+      <ThemedView style={[styles.footer]}>
         <Link href="/about" style={{ color: theme.title }}>
           About
         </Link>
         <Link href="/contact" style={{ color: theme.title }}>
           Contact
         </Link>
-      </View>
+      </ThemedView>
     </>
   );
 };
