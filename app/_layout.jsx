@@ -1,8 +1,7 @@
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { StatusBar, useColorScheme } from "react-native";
 import React from "react";
-import { Slot, Stack, Link } from "expo-router";
+import { Stack } from "expo-router";
 import { Colors } from "../constants/Colors";
-import ThemedView from "../components/ThemedView";
 
 const RootLayout = () => {
   const colorScheme = useColorScheme();
@@ -19,13 +18,9 @@ const RootLayout = () => {
       >
 
         <Stack.Screen name="index" options={{ title: "Home" }} />
-        <Stack.Screen name="about" options={{ title: "About" }} />
-        <Stack.Screen
-          name="contact"
-          options={{ title: "Contact", headerShown: false }}
-        />
-        // For auth page
-        <Stack.Screen name="auth" options={{ headerShown: false }} />
+
+        {/* For auth */}
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       </Stack>
 
       
@@ -35,4 +30,3 @@ const RootLayout = () => {
 
 export default RootLayout;
 
-const styles = StyleSheet.create({});

@@ -21,12 +21,12 @@ const Home = () => {
       <ThemedText>Reading List App</ThemedText>
 
       <Spacer height={30} />
-      <Link href="auth/login">
+      <Link href="/login">
         <ThemedText>Login</ThemedText>
       </Link>
       <Spacer height={100} />
-      
-      <Link href="auth/register">
+
+      <Link href="/register">
         <ThemedText>Register</ThemedText>
       </Link>
 

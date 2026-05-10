@@ -15,7 +15,7 @@ const Register = () => {
         <ThemedText title={true} style={styles.title}>Register for your Account</ThemedText>
         
         <Spacer height={100} />
-        <Link href="/auth/login">
+        <Link href="/login">
             <ThemedText style={{textAlign: "center"}}>Login Instead</ThemedText>
         </Link>
 
